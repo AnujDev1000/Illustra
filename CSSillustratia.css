@@ -1,0 +1,637 @@
+:root
+{
+    --background1: #ffc743;
+    --background2: #000b49;
+    --textcolor1: #000b49;
+    --textcolor2: #807e7e;
+    --textcolor3: #ffffff;
+}
+*
+{
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'Bahnschrift light';
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all .3s linear;
+}
+.header
+{
+    position: fixed;
+    min-width: 100%;
+    padding: 1% 9%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 10;
+}
+.header-back
+{
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    left: 0;
+    top: 0;
+    background: var(--textcolor3);
+    z-index: 1;
+}
+.active-header-back
+{
+    height: 100%;
+}
+.logo-box
+{
+    font-family: 'Baskerville Old Face';
+    font-size: 2.5rem;
+    color: var(--textcolor1);
+    z-index: 2;
+}
+.menu
+{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 2;
+}
+.menu a
+{
+    font-size: 1.2rem;
+    transition: .2s;
+}
+.menu a:hover
+{
+    transform: translateY(-.2rem);
+}
+.menu-bar
+{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+    display: none;
+}
+.menu-bar svg
+{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.user-box
+{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    z-index: 2;
+}
+.user-box a
+{
+    padding: .7rem 1rem;
+    background: transparent;
+    color: var(--textcolor1);
+}
+.user-box .register
+{
+    background: var(--background2);
+    color: var(--textcolor3);
+    border-radius: .5rem;
+}
+.home
+{
+    height: 39rem;
+    padding-left: 9%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: var(--background1);
+    overflow: hidden;
+}
+.home-content
+{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.home-content p
+{
+    color: var(--textcolor2);
+    font-size: 1.1rem;
+    text-transform: none;
+}
+.home-content h1
+{
+    font-size: 3.5rem;
+}
+.home-img
+{
+    flex: 3;
+    min-width: 30rem;
+}
+.home-img svg
+{
+    position: relative;
+    width: 120%;
+    height: 110%;
+    transform: translateX(5%) rotateZ(-20deg);
+}
+.download
+{
+    max-width: max-content;
+    padding: .7rem 2rem;
+    background: var(--background2);
+    color: var(--textcolor3);
+    border-radius: .5rem;
+}
+.about
+{
+    padding: 7% 9%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--background2);
+}
+.about-rating
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-rating > div
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+.about-rating > div:nth-child(2)
+{
+    align-items: flex-end;
+}
+.about-rating div h1
+{
+    color: var(--textcolor3);
+}
+.about-rating div p
+{
+    color: var(--textcolor3);
+}
+.about-rating > div:nth-child(2) p
+{
+    text-align: right;
+}
+.stars
+{
+    display: flex;
+    flex-direction: row;
+    gap: .1rem;
+}
+.stars svg
+{
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--background1);
+}
+.about-companies
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-companies svg
+{
+    width: 6rem;
+    height: 3rem;
+    fill: var(--textcolor3);
+}
+.about-content
+{
+    min-width: 30rem;
+    padding: 0% 5%;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.about-content-img
+{
+    flex: 3;
+    min-width: 25rem;
+}
+.about-content-img svg
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.about-content-main
+{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.about-content-main hr
+{
+    width: 3.5rem;
+    height: .3rem;
+    border-radius: .2rem;
+    background: var(--textcolor3);
+}
+.about-content-main p
+{
+    color: var(--textcolor3);
+    text-transform: none;
+}
+.about-content-main h1
+{
+    color: var(--textcolor3);
+    font-size: 3.5rem;
+}
+.about-content-main .download
+{
+    background: var(--background1);
+    color: var(--textcolor1);
+}
+.stats
+{
+    padding: 2% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.stats > div
+{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.stats > div h1
+{
+    color: var(--textcolor3);
+    font-size: 4rem;
+}
+.stats > div p
+{
+    color: var(--textcolor3);
+}
+.services
+{
+    padding: 7% 9%;
+    display: flex;
+    flex-direction: column;
+    background: var(--background1);
+}
+.services h1
+{
+    text-align: center;
+    color: var(--textcolor1);
+    font-size: 3rem;
+}
+.services > p
+{
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 5rem;
+}
+.services-card-box
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.services-card
+{
+    min-width: 20rem;
+    flex: 1;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background: var(--textcolor3);
+    box-shadow: .1rem .1rem .2rem rgba(0,0,0,.4);
+    border-radius: .5rem;
+}
+.services-card svg
+{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+    filter: drop-shadow(.3rem .3rem .1rem rgba(0,0,0,.7));
+}
+.services-card h2
+{
+    text-align: center;
+}
+.services-card p
+{
+    color: var(--textcolor2);
+    text-align: center;
+}
+.services-card:nth-child(even)
+{
+    background: var(--background2);
+}
+.services-card:nth-child(even) h2,.services-card:nth-child(even) p
+{
+    color: var(--textcolor3);
+}
+.listed
+{
+    padding: 10% 9%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background: var(--background2);
+}
+.listed-content-img
+{
+    flex: 3;
+    min-width: 20rem;
+}
+.listed-content-img svg
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.listed-content-main
+{
+    min-width: 25rem;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.listed-content-main hr
+{
+    width: 3.5rem;
+    height: .3rem;
+    border-radius: .2rem;
+    background: var(--textcolor3);
+}
+.listed-content-main p
+{
+    color: var(--textcolor3);
+    text-transform: none;
+}
+.listed-content-main h1
+{
+    color: var(--textcolor3);
+    font-size: 3.5rem;
+}
+.listed-content-main .download
+{
+    background: var(--background1);
+    color: var(--textcolor1);
+}
+.extrapage
+{
+    padding: 5% 9%;
+    background: var(--background2);
+}
+.extrapage > div
+{
+    padding: 2% 0;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background: rgb(0, 119, 255);
+    border-radius: 1rem;
+}
+.extrapage-img
+{
+    flex: 1;
+    min-width: 20rem;
+}
+.extrapage-img svg
+{
+    width: 100%;
+    height: 100%;
+    transform: translate(-5%,5%);
+}
+.extrapage-content
+{
+    min-width: 25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.extrapage-content h1
+{
+    font-size: 3rem;
+    color: var(--textcolor3);
+}
+.extrapage-content p
+{
+    color: var(--textcolor3);
+}
+.contact-us
+{
+    max-width: max-content;
+    padding: .7rem 2rem;
+    background: var(--background2);
+    color: var(--textcolor3);
+    border-radius: .5rem;
+}
+.contact
+{
+    padding: 5% 9%;
+    display: flex;
+    flex-direction: row;
+    background: var(--background2);
+}
+.contact > div
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.contact > div:nth-child(2),.contact > div:nth-child(3)
+{
+    align-items: center;
+}
+.contact > div:nth-child(4)
+{
+    align-items: flex-end;
+}
+
+.contact > div a
+{
+    position: relative;
+    color: var(--textcolor3);
+}
+.contact > div a::before
+{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: .05rem;
+    bottom: 0;
+    background: var(--textcolor3);
+    transition: all .3s linear;
+}
+.contact > div a:hover::before
+{
+    width: 100%;
+}
+.heading
+{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.heading::before
+{
+    display: none;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px)
+{
+    html
+    {
+        font-size: 65%;
+    }
+    .header
+    {
+        padding: 1% 7%;
+    }
+    .menu
+    {
+        position: absolute;
+        padding: 1rem 7%;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        flex-direction: column;
+        clip-path: polygon(0 0,100% 0,0 0,0 0);
+    }
+    .menu-link
+    {
+        display: block;
+    }
+    .menu-active
+    {
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+        background: var(--textcolor3);
+    }
+    .menu-bar
+    {
+        display: flex;
+    }
+    .home
+    {
+        padding-left: 7%;
+    }
+    .about
+    {
+        padding: 7%;
+    }
+    .services
+    {
+        padding: 7%;
+    }
+    .listed
+    {
+        padding: 10% 7%;
+    }
+    .extrapage
+    {
+        padding: 7%;
+    }
+    .contact
+    {
+        padding: 7%;
+    }
+}
+
+
+@media (max-width: 540px)
+{
+    html
+    {
+        font-size: 50%;
+    }
+    .header
+    {
+        padding: 1% 5%;
+    }
+    .menu
+    {
+        padding: 1rem 5%;
+    }
+    .home
+    {
+        padding-top: 15%;
+        padding-left: 5%;
+        height: 100%;
+    }
+    .home-content
+    {
+        min-width: 30rem;
+    }
+    .home-content p
+    {
+        width: 70%;
+    }
+    .about
+    {
+        padding: 9% 5%;
+    }
+    .services
+    {
+        padding: 9% 5%;
+    }
+    .services-card
+    {
+        padding-bottom: 5%;
+    }
+    .listed
+    {
+        padding: 10% 5%;
+    }
+    .extrapage
+    {
+        padding: 9% 5%;
+    }
+    .extrapage-content
+    {
+        padding: 2% 5%;
+    }
+    .contact
+    {
+        padding: 9% 5%;
+    }
+    .contact > div:nth-child(2),.contact > div:nth-child(3)
+    {
+        align-items: unset;
+    }
+    .contact > div:nth-child(4)
+    {
+        align-items: unset;
+    }
+}
